@@ -30,7 +30,7 @@
 
     body {
       font-family: 'Barlow', sans-serif;
-      background: var(--y);
+      background: var(--navy);
       color: var(--light);
       line-height: 1.6;
       overflow-x: hidden;
@@ -52,14 +52,7 @@
       transition: background 0.3s;
     }
 
-    .nav-logo img {
-      height: 46px;
-      width: auto;
-      object-fit: contain;
-      /* filter: brightness(0) invert(1); */
-    }
-
-    .nav-links {
+.nav-links {
       display: flex;
       gap: 36px;
       list-style: none;
@@ -284,30 +277,8 @@
     }
     .btn-ghost:hover { border-color: var(--green); background: rgba(45,184,75,0.08); }
 
-    .hero-stats {
-      position: absolute;
-      bottom: 60px;
-      right: 48px;
-      z-index: 1;
-      display: flex;
-      gap: 48px;
-      opacity: 0;
-      animation: fadeUp 0.8s ease 1s forwards;
-    }
-    .stat { text-align: right; }
-    .stat-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 42px;
-      font-weight: 800;
-      color: var(--green);
-      line-height: 1;
-    }
-    .stat-label {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
+    .logo-svg { height: 46px; width: auto; display: block; }
+    .footer-logo-svg { height: 52px; width: auto; display: block; margin-bottom: 16px; }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
@@ -371,7 +342,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 2px;
     }
 
@@ -454,7 +425,7 @@
 
     .serve-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2px;
     }
 
@@ -930,6 +901,7 @@
 
       .services-grid { grid-template-columns: 1fr; }
       .serve-grid { grid-template-columns: 1fr; }
+
       .serve-header { grid-template-columns: 1fr; gap: 24px; }
       .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .about-image-block { display: none; }
@@ -954,7 +926,11 @@
   <!-- NAV -->
   <nav>
     <a href="#home" class="nav-logo">
-      <img src="assets/logo-small.jpg" alt="JET Inspection Services, Inc." />
+      <svg class="logo-svg" viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg" aria-label="JET Inspection Services, Inc.">
+        <rect x="0" y="0" width="5" height="52" fill="#2db84b"/>
+        <text x="17" y="40" font-family="'Barlow Condensed', sans-serif" font-weight="800" font-size="44" fill="#2db84b" letter-spacing="-1">JET</text>
+        <text x="17" y="51" font-family="'Barlow Condensed', sans-serif" font-weight="600" font-size="10" fill="#e8edf4" letter-spacing="3">INSPECTION SERVICES</text>
+      </svg>
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
@@ -995,20 +971,6 @@
         <a href="#services" class="btn-ghost">Our Services</a>
       </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">7+</div>
-        <div class="stat-label">Years Serving NYC</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">60+</div>
-        <div class="stat-label">Years Combined Exp.</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">5</div>
-        <div class="stat-label">Boroughs Covered</div>
-      </div>
-    </div>
   </section>
 
   <!-- SERVICES -->
@@ -1028,8 +990,8 @@
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
           </div>
-          <h3>Category 1 Inspections</h3>
-          <p>Licensed annual inspections performed in full accordance with NYC elevator code requirements, ensuring your equipment stays compliant and operationally safe year over year.</p>
+          <h3>Category 1 Annual Test Witnessing</h3>
+          <p>Witnessing of annual tests to ensure your elevator and escalator equipment stays compliant with current New York City DOB requirements.</p>
         </div>
 
         <div class="service-card reveal reveal-delay-1">
@@ -1037,26 +999,17 @@
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
           </div>
-          <h3>Category 5 Testing</h3>
-          <p>Comprehensive five-year full-load testing and inspection witnessing to verify system performance and ensure complete regulatory compliance across the inspection cycle.</p>
+          <h3>Category 5 Five Year Test Witnessing</h3>
+          <p>Witnessing of five-year full load testing to ensure your elevator equipment stays compliant with current New York City DOB requirements.</p>
         </div>
 
         <div class="service-card reveal reveal-delay-2">
           <div class="service-num">03</div>
           <div class="service-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-          </div>
-          <h3>Test Witnessing</h3>
-          <p>Independent third-party witnessing for elevator and escalator testing, ensuring proper execution and thorough documentation of all required procedures with an unbiased eye.</p>
-        </div>
-
-        <div class="service-card reveal reveal-delay-3">
-          <div class="service-num">04</div>
-          <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
           </div>
           <h3>Periodic Inspections</h3>
-          <p>Routine inspections for elevators and escalators designed to identify maintenance issues early, support ongoing compliance standards, and prevent costly operational interruptions.</p>
+          <p>Routine inspections for elevators and escalators designed to identify code deficiencies, support ongoing compliance standards, and prevent costly operational interruptions.</p>
         </div>
       </div>
     </div>
@@ -1079,7 +1032,7 @@
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
           </div>
           <h3>Property Managers</h3>
-          <p>Juggling multiple properties means compliance can't slip through the cracks. We provide fast scheduling, clear documentation, and timely reports so your buildings stay current with NYC inspection requirements — without adding to your workload.</p>
+          <p>Juggling multiple properties means compliance can slip through the cracks. We provide fast scheduling, clear documentation, and timely reports so your buildings stay current with NYC inspection requirements — without adding to your workload.</p>
           <span class="compliance-tag">Compliance Made Simple</span>
         </div>
 
@@ -1088,18 +1041,10 @@
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
           </div>
           <h3>Building Owners</h3>
-          <p>Protect your investment and your tenants. NYC law requires regular elevator and escalator inspections — our licensed inspectors ensure you meet every obligation, avoid violations, and maintain certificates of operation with full transparency.</p>
+          <p>Protect your investment and your tenants. NYC law requires regular elevator and escalator inspections — our licensed inspectors ensure you meet every obligation and avoid violations.</p>
           <span class="compliance-tag">Avoid Violations & Fines</span>
         </div>
 
-        <div class="serve-card reveal reveal-delay-2">
-          <div class="serve-icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16M3 21h18M9 21V9.5M15 21V9.5M9 9.5h6M9 9.5a3 3 0 11-6 0 3 3 0 016 0zM15 9.5a3 3 0 116 0 3 3 0 01-6 0z"/></svg>
-          </div>
-          <h3>Developers</h3>
-          <p>From new construction to gut renovations, getting your elevators and escalators inspected and approved on time is critical to your timeline. We coordinate seamlessly with your project team to meet DOB milestones and sign-off requirements.</p>
-          <span class="compliance-tag">DOB Sign-Off Support</span>
-        </div>
       </div>
 
       <div class="serve-compliance-bar reveal">
@@ -1250,9 +1195,8 @@
               <label>Service Needed</label>
               <select name="service" required>
                 <option value="" disabled selected>Select a service...</option>
-                <option>Category 1 Annual Inspection</option>
-                <option>Category 5 Five-Year Testing</option>
-                <option>Test Witnessing</option>
+                <option>Category 1 Annual Test Witnessing</option>
+                <option>Category 5 Five Year Test Witnessing</option>
                 <option>Periodic Inspection</option>
                 <option>Not Sure — Need Guidance</option>
               </select>
@@ -1277,7 +1221,11 @@
     <div class="footer-inner">
       <div class="footer-top">
         <div class="footer-brand">
-          <img src="assets/logo-small.jpg" alt="JET Inspection Services" class="footer-logo" />
+          <svg class="footer-logo-svg" viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg" aria-label="JET Inspection Services">
+        <rect x="0" y="0" width="5" height="52" fill="#2db84b"/>
+        <text x="17" y="40" font-family="'Barlow Condensed', sans-serif" font-weight="800" font-size="44" fill="#2db84b" letter-spacing="-1">JET</text>
+        <text x="17" y="51" font-family="'Barlow Condensed', sans-serif" font-weight="600" font-size="10" fill="#e8edf4" letter-spacing="3">INSPECTION SERVICES</text>
+      </svg>
           <span class="tagline">Elevator and Escalator Test Witnessing and Inspections</span>
           <p>Licensed New York City elevator inspection agency. Serving all five boroughs with independence, precision, and over 60 years of combined expertise.</p>
         </div>

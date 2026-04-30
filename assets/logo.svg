@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 90" width="360" height="90">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&amp;family=Barlow:wght@600&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Bold green left bar -->
+  <rect x="0" y="0" width="6" height="90" fill="#2db84b"/>
+
+  <!-- JET — massive bold letters -->
+  <text
+    x="22" y="68"
+    font-family="'Barlow Condensed', Impact, Arial Narrow, sans-serif"
+    font-weight="800"
+    font-size="72"
+    fill="#2db84b"
+    letter-spacing="-2"
+    text-rendering="geometricPrecision"
+  >JET</text>
+
+  <!-- INSPECTION SERVICES -->
+  <text
+    x="24" y="82"
+    font-family="'Barlow Condensed', Impact, Arial Narrow, sans-serif"
+    font-weight="600"
+    font-size="13"
+    fill="#ffffff"
+    letter-spacing="4"
+    text-rendering="geometricPrecision"
+  >INSPECTION SERVICES</text>
+
+  <!-- Thin green rule under INSPECTION SERVICES -->
+  <rect x="22" y="86" width="220" height="1.5" fill="#2db84b" opacity="0.5"/>
+</svg>
