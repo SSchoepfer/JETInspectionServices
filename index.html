@@ -107,37 +107,40 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 72px; left: 0; right: 0;
+      top: 72px; right: 24px;
+      left: auto;
+      width: 220px;
       background: rgba(10,15,30,0.98);
       backdrop-filter: blur(16px);
       z-index: 99;
-      padding: 32px 24px;
-      border-bottom: 1px solid rgba(45,184,75,0.15);
+      padding: 8px 0;
+      border: 1px solid rgba(45,184,75,0.2);
+      border-top: 2px solid var(--green);
       flex-direction: column;
-      gap: 8px;
     }
     .mobile-menu.open { display: flex; }
     .mobile-menu a {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 20px;
+      font-size: 14px;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--light);
       text-decoration: none;
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      transition: color 0.2s;
+      padding: 12px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color 0.2s, background 0.2s;
     }
     .mobile-menu a:last-child { border-bottom: none; }
-    .mobile-menu a:hover { color: var(--green); }
+    .mobile-menu a:hover { color: var(--green); background: rgba(45,184,75,0.05); }
     .mobile-cta {
-      margin-top: 16px;
+      margin: 8px 12px 4px;
       background: var(--green) !important;
       color: var(--white) !important;
       text-align: center;
-      padding: 16px !important;
+      padding: 10px 20px !important;
       border-bottom: none !important;
+      border: none !important;
     }
 
     /* ── HERO ── */
@@ -991,14 +994,14 @@
   </nav>
 
   <!-- MOBILE MENU -->
-  <nav class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu">
     <a href="#services" class="mobile-link">Services</a>
     <a href="#serve" class="mobile-link">Who We Serve</a>
     <a href="#about" class="mobile-link">About</a>
     <a href="#why" class="mobile-link">Why Us</a>
     <a href="#contact" class="mobile-link">Contact</a>
     <a href="#contact" class="mobile-link mobile-cta">Request Inspection</a>
-  </nav>
+  </div>
 
   <!-- HERO -->
   <section class="hero" id="home">
