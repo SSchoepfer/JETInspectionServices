@@ -280,6 +280,34 @@
     .logo-svg { height: 46px; width: auto; display: block; }
     .footer-logo-svg { height: 52px; width: auto; display: block; margin-bottom: 16px; }
 
+    .hero-stats {
+      position: absolute;
+      bottom: 60px;
+      right: 48px;
+      z-index: 1;
+      display: flex;
+      gap: 48px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 1s forwards;
+    }
+    .hero-highlight-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+    .hero-highlight-value {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -971,6 +999,16 @@
         <a href="#services" class="btn-ghost">Our Services</a>
       </div>
     </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="hero-highlight-label">Property Managers</div>
+        <div class="hero-highlight-value">Compliance<br>Made Simple</div>
+      </div>
+      <div class="stat">
+        <div class="hero-highlight-label">Building Owners</div>
+        <div class="hero-highlight-value">Avoid Violations<br>&amp; Fines</div>
+      </div>
+    </div>
   </section>
 
   <!-- SERVICES -->
@@ -1041,7 +1079,7 @@
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
           </div>
           <h3>Building Owners</h3>
-          <p>Protect your investment and your tenants. NYC law requires regular elevator and escalator inspections — our licensed inspectors ensure you meet every obligation and avoid violations.</p>
+          <p>Our licensed inspectors ensure you meet every obligation and avoid violations.</p>
           <span class="compliance-tag">Avoid Violations & Fines</span>
         </div>
 
